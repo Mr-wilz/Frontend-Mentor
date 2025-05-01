@@ -1,0 +1,7 @@
+{
+  "css.format.spaceAroundSelectorSeparator": true,
+  "editor.defaultFormatter": "mblode.pretty-formatter",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": true
+}

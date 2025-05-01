@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conf Ticket</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="icon" href="../images/favicon-32x32.png" type="image/x-icon" />
+
+  <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body>
+  <!--bg svgs  -->
+  <img src="../images/pattern-squiggly-line-bottom-desktop.svg" alt class="bg" id="squiggly-line-bottom" />
+  <img src="../images/pattern-squiggly-line-top.svg" alt class="bg" id="squiggly-line-top" />
+  <img src="../images/pattern-circle.svg" alt class="bg" id="pattern-circle-1" />
+  <img src="../images/pattern-circle.svg" alt class="bg" id="pattern-circle-2" />
+  <img src="../images/pattern-lines.svg" alt class="bg" id="pattern-lines" />
+
+  <div class="container">
+    <!-- header -->
+
+    <div class="logo">
+      <img src="../images/logo-mark.svg" alt />
+      <h4>Coding Conf</h4>
+    </div>
+
+    <!-- Head lines -->
+    <div class="title">
+      <h1 class="title-text">
+        Your Journey to Coding Conf 2025 Starts Here!
+      </h1>
+      <p class="title-paragraph">
+        Secure your spot at next year's coding conference
+      </p>
+    </div>
+
+    <!-- input data -->
+    <form action>
+      <div class="drop-area">
+        <!-- drag and drop box -->
+        <label for="upload-avatar" id="upload-avatar"> Upload Avatar </label>
+        <div class="drop-box" id="drop-box">
+          <img src="../images/icon-upload.svg" alt />
+          <img id="liveAvatarPreview" class="hidden" src="" alt="Live Preview"
+            style="width: 50px; height: 50px; border-radius: 10px; object-fit: contain; margin-bottom: 10px;" />
+
+          <input type="file" id="file-input" accept="image/*" hidden />
+          <label for="file-input" class="upload-label">
+
+            <p id="drop-text" style="font-size: 14px; cursor: pointer;">
+              drag & drop or click to Upload
+            </p>
+            <div class="uploaded_text_div hidden">
+              <button class="remove_image">remove image</button>
+              <button class="change_image">change image</button>
+            </div>
+          </label>
+        </div>
+
+        <!-- popup info -->
+        <div class="note">
+          <img src="../images/icon-info.svg" alt />
+          <p>Upload photo (JPG OF PNG. Max size: 500KB).</p>
+          <span id="fileError" class="error-message">
+            <img src="../images/icon-info.svg" alt class="error-popup" />
+            <p>
+              File size is too large. Please upload a file smaller than 500KB.
+            </p>
+          </span>
+        </div>
+      </div>
+
+      <!-- name input -->
+      <div class="user-input">
+        <label for="name-input" id="name-input">Full Name</label>
+        <input type="text" id="name_input" placeholder="" required />
+        <label for="email" id="email">Email Address</label>
+        <input type="email" name id="email_input" placeholder="example@email.com" required />
+        <span id="emailError" class="error-message hidden">
+          <img src="../images/icon-info.svg" alt />
+          <p>Please enter a valid email address.</p>
+        </span>
+        <label for="github" id="github">Github Username</label>
+        <input type="text" id="github_input" placeholder="e.g. johndoe" required />
+
+        <button type="submit" class="gen-ticket">Generate My Ticket</button>
+      </div>
+    </form>
+
+    <footer>
+      <div class="footer-container">
+        <p class="footer-text">
+          Challenge by <a href="https://frontendmentor.io" target="_blank">frontendmentor</a>. Code by <a
+            href="https://github.com/Mr-wilz" target="_blank">Mr-Wilz.</a>
+        </p>
+      </div>
+    </footer>
+
+  </div>
+
+
+
+
+  <!-- ticket -->
+  <div class="ticket-body hidden" id="ticketBody">
+    <div class="confirmation-section" id="confirmationSection">
+      <!-- Congrats Message -->
+      <div class="congrats-message">
+        <div class=" logo">
+          <img src="../images/logo-mark.svg" alt="Coding Conf Logo" />
+          <h4>Coding Conf</h4>
+        </div>
+        <h1>
+          Congrats, <span id="userFullName">Your Name</span>! Your ticket is
+          ready.
+        </h1>
+        <p style="margin-top: 1rem; font-size: 1.2rem; letter-spacing: 0;">
+          We’ve emailed your ticket to <span id="userEmail">you@example.com</span> and will send updates in the
+          run up
+          to the event.
+        </p>
+      </div>
+    </div>
+
+
+    <!-- Ticket Display -->
+    <div class="ticket">
+      <div class="ticket-container">
+        <div class="ticket-header">
+          <div class="ticket-logo">
+            <div class="ticket-logo-img">
+              <span> <img src="../images/logo-mark.svg" alt="Coding Conf Logo" /></span>
+              <div class="packed">
+                <h2>Coding Conf</h2>
+                <p id="ticketDate">Jan 31, 2025 / Austin, TX</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ticket-content">
+          <img id="avatarPreview" src="../images/image-avatar.jpg" alt="User Avatar" class="ticket-avatar" />
+          <div class="ticket-user-info">
+            <h3 id="ticketName" class="Full-name">Wilfort Abel Essien</h3>
+            <p>
+              <img src="../images/icon-github.svg" alt="GitHub Icon" />
+              <span id="ticketGitHub">@github name</span>
+            </p>
+          </div>
+        </div>
+        <div class="ticket-number">#<span id="ticketID">123456</span></div>
+      </div>
+    </div>
+
+
+    <!-- Ticket Footer -->
+    <div class="ticket-footer">
+      <div class="ticket-footer-text">
+        <p class="footer-text">
+          Challenge by <a href="https://frontendmentor.io">frontendmentor</a>. Code by <a
+            href="https://github.com/Mr-wilz">Mr-Wilz.</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="script.js"></script>
+</body>
+
+</html>

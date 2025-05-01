@@ -1,0 +1,494 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url(../images/background-mobile.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    font-family: Inconsolata, monospace;
+    color: white;
+    z-index: 100;
+
+
+}
+
+.bg {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    filter: blur(1px);
+    z-index: 1;
+}
+
+#pattern-circle-1 {
+    top: -15%;
+    left: 5%;
+}
+
+#pattern-circle-2 {
+    top: 45%;
+    right: 20%;
+}
+
+#squiggly-line-top {
+    top: 0;
+    right: 0;
+    height: 10rem;
+    width: 15rem;
+}
+
+#squiggly-line-bottom {
+    bottom: -10px;
+    left: -50px;
+    height: 10rem;
+    width: 20rem;
+    z-index: 1;
+    position: fixed;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    margin-top: 10px;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    gap: 1rem;
+    font-size: 24px;
+}
+
+.logo img {
+    height: 1.5rem;
+}
+
+.error-popup {
+    margin: 0;
+    padding: 0;
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+
+}
+
+.title-text {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 18px;
+    opacity: 0.8;
+    font-family: Inconsolata, monospace;
+    font-weight: 400;
+    color: rgb(150, 140, 140);
+    letter-spacing: 1.5px;
+
+}
+
+
+.uploaded_text_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border: none;
+}
+
+.remove_image,
+.change_image {
+    border: 1px solid rgba(128, 128, 128, 0.531);
+    border-radius: 10px;
+    background-color: hsl(7, 88%, 67%);
+    color: white;
+    text-align: center;
+    text-shadow: black 0px 1px 4px;
+    padding: 0.3rem;
+    text-transform: capitalize;
+}
+
+
+/* form inputs */
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 80%;
+    margin-bottom: 20px;
+    z-index: 10;
+
+}
+
+.drop-area {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    height: 100%;
+
+}
+
+.drop-box {
+    border: 1.5px dashed grey;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 1rem;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    background-color: rgba(95, 83, 109, 0.193);
+    border-radius: 10px;
+}
+
+/* drag and drop area */
+
+.drop-box img {
+    height: 50px;
+    width: 50px;
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.error-message {
+    height: auto;
+    display: flex;
+    /* justify-content: center; */
+}
+
+.note {
+    display: flex;
+    gap: 0.3rem;
+
+    width: 100%;
+    align-items: center;
+
+}
+
+.note p {
+    font-size: 14px;
+}
+
+
+
+#fileError {
+    display: none;
+
+}
+
+#emailError {
+    display: none;
+
+}
+
+.user-input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    gap: .7rem;
+    margin-bottom: 20px;
+    z-index: 10;
+}
+
+
+input {
+    background-color: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.531);
+    border-radius: 8px;
+    background-color: rgba(120, 91, 152, 0.257);
+    padding: .5rem;
+    font-family: inconsolata, monospace;
+    color: white;
+
+}
+
+.gen-ticket {
+    width: 100%;
+    padding: .5rem;
+    font-size: 16px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background: hsl(7, 88%, 67%);
+    font-weight: 600;
+    border: none;
+}
+
+.gen-ticket:hover {
+    background: hsl(7, 79%, 73%);
+    font-weight: 650;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* congrats-message */
+.congrats-message {
+
+    text-align: center;
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+}
+
+#userFullName {
+    font-size: 2.5rem;
+    font-weight: 700;
+    background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 0%, 100%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* for Firefox */
+}
+
+#userEmail {
+    font-size: 1.4rem;
+    font-weight: 700;
+    background: linear-gradient(to right, hsl(7, 86%, 67%), hsl(0, 30%, 65%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    /* for Firefox */
+}
+
+
+
+/* ticket styles */
+.ticket {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-size: cover;
+    padding: 2rem;
+}
+
+.ticket-container {
+    background-image: url("../images/pattern-ticket.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    color: white;
+    font-family: inconsolata, monospace;
+}
+
+
+/* Header */
+.ticket-header .ticket-logo-img {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.ticket-logo-img img {
+    width: 40px;
+    height: 40px;
+}
+
+.packed h2 {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.packed p {
+    font-size: 0.75rem;
+    color: #bbb;
+    /* margin: 0; */
+}
+
+#ticketDate {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Ticket Number */
+.ticket-number {
+    position: absolute;
+    right: .5rem;
+    top: 5rem;
+    transform: rotate(90deg);
+    color: #cbbcff;
+    font-size: 1rem;
+    opacity: 0.6;
+    font-weight: 700;
+}
+
+
+/* Ticket Content */
+.ticket-content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.ticket-avatar {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    object-fit: contain;
+    background: #444;
+
+    border: .5px solid #ccc;
+}
+
+.ticket-user-info h3 {
+    /* margin: 0; */
+    font-size: 1rem;
+}
+
+.ticket-user-info p {
+    display: flex;
+    align-items: center;
+    /* gap: 0.5rem; */
+    color: #ccc;
+    font-size: 0.8rem;
+    /* margin: 0.25rem 0 0; */
+}
+
+footer .footer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.footer-text {
+    text-align: center;
+    font-size: 0.8rem;
+    color: #f3efef;
+
+    margin-bottom: 0;
+
+}
+
+.footer-text a {
+    text-decoration: none;
+    color: blue;
+    font-weight: 600;
+    text-shadow: white 0px 0px 0.2px;
+    cursor: pointer;
+}
+
+.footer-text a:hover {
+    color: darkblue;
+}
+
+.ticket-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* gap: 0.5rem; */
+    margin-top: 13%;
+}
+
+@media screen and (max-width: 768px) {
+
+    .ticket-footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        margin-top: 30%;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .ticket {
+        padding: .5rem;
+        margin: 0 auto;
+    }
+
+    .congrats-message {
+        margin: .2rem;
+    }
+
+    .ticket-container {
+        gap: .5rem;
+        /* padding: 1rem; */
+    }
+
+    .ticket-header .ticket-logo-img {
+        gap: 0.5rem;
+    }
+
+    .ticket-header .ticket-logo-img img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .ticket-content {
+        gap: 0.5rem;
+    }
+
+    .ticket-avatar {
+        width: 35px;
+        height: 35px;
+    }
+
+    .ticket-number {
+        right: 0.2rem;
+        top: 4rem;
+    }
+
+    footer p {
+
+        font-size: smaller;
+        text-align: center;
+    }
+
+}
