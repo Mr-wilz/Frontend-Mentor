@@ -37,14 +37,14 @@ Users should be able to:
 
 ![alt text](<Screenshot (23).png>)
 
-***Mobile view***
+**_Mobile view_**
 
 ![alt text](image-1.png)
 
 ### Links
 
-- Solution URL: [https://github.com/bhuvi819381/Conference-Ticket-Generator.git]
-- Live Site URL: [https://bhuvi819381.github.io/Conference-Ticket-Generator]
+- Solution URL: [https://github.com/Mr-wilz/Frontend-Mentor]
+- Live Site URL: [https://mr-wilz.github.io/Frontend-Mentor/]
 
 ## My process
 
